@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+
+
+section.hero {
+    background-image: url(../assets/images/welcome-hero/banner.jpg) ;
+    
+}
+
+section.counter{
+        background-image: url(../assets/images/counter/counter-banner.jpg);
+    
+}
+
+.reviews-swiper .swiper-slide {
+    transition: filter 0.3s ease;
+}
+
+.reviews-swiper .swiper-slide:not(.swiper-slide-active) {
+    filter: blur(4px);
+}
+
+@media (min-width: 768px) {
+    .reviews-swiper .swiper-slide:not(.swiper-slide-active):not(.swiper-slide-next):not(.swiper-slide-next + .swiper-slide) {
+        filter: blur(4px);
+    }
+}
+
+@media (min-width: 1024px) {
+    .reviews-swiper .swiper-slide:not(.swiper-slide-active):not(.swiper-slide-next):not(.swiper-slide-next + .swiper-slide):not(.swiper-slide-next + .swiper-slide + .swiper-slide):not(.swiper-slide-next + .swiper-slide + .swiper-slide + .swiper-slide) {
+        filter: blur(4px);
+    }
+}
+.articles-swiper-container .swiper-wrapper .swiper-slide {
+    /* تعطيل أي تأثير بلور قد يتم تطبيقه من مكان آخر */
+    filter: none !important;
+    transition: none !important;
+}
